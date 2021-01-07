@@ -77,10 +77,10 @@ function get_status {
             fi
 
             # Update printer status
-            echo -e "Status: $octopi_state - Tool: ${octopi_tool_actual}${celsius}/${octopi_tool_target}${celsius} - Bed: ${octopi_bed_actual}${celsius}/${octopi_bed_target}${celsius}" > /text/printer.txt
+            echo -e "KSR Parts - Filename: ${octopi_filename} - Status: $octopi_state - Hotend: ${octopi_tool_actual}${celsius} - Bed: ${octopi_bed_actual}${celsius}" > /text/printer.txt
         else
             # Update status
-            echo "Status: Not Connected" > /text/printer.txt
+            echo "KSR Parts - Status: Not Connected / Not Printing / Taking a Break!" > /text/printer.txt
         fi
     else
         # Update status
